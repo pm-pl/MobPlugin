@@ -25,8 +25,8 @@ namespace IvanCraft623\MobPlugin\entity\ai\control;
 
 use IvanCraft623\MobPlugin\entity\Mob;
 use IvanCraft623\MobPlugin\utils\Utils;
-use IvanCraft623\MobPlugin\libs\_33786a7319a1cb0c\IvanCraft623\Pathfinder\BlockPathType;
-use IvanCraft623\MobPlugin\libs\_33786a7319a1cb0c\IvanCraft623\Pathfinder\world\SyncBlockGetter;
+use IvanCraft623\MobPlugin\libs\_50baf027be6e3520\IvanCraft623\Pathfinder\BlockPathType;
+use IvanCraft623\MobPlugin\libs\_50baf027be6e3520\IvanCraft623\Pathfinder\world\SyncBlockGetter;
 
 use pocketmine\math\Vector3;
 use function atan2;
@@ -149,14 +149,14 @@ class MoveControl implements Control {
 	}
 
 	private function isWalkable(float $x, float $z) : bool {
-		$navigation = $this->mob->getNavigation();
-		if ($navigation !== null) {
-			$nodeEvaluator = $navigation->getNodeEvaluator();
-			$location = $this->mob->getLocation();
-			if ($nodeEvaluator !== null &&
-				!$nodeEvaluator->getBlockPathType(new SyncBlockGetter($this->mob->getWorld()), (int) floor($location->x + $x), (int) floor($location->y), (int) floor($location->z + $z))->equals(BlockPathType::WALKABLE)) {
-				return false;
-			}
+		$location = $this->mob->getLocation();
+		if (!$this->mob->getNavigation()->getNodeEvaluator()->getBlockPathType(
+			new SyncBlockGetter($this->mob->getWorld()),
+			(int) floor($location->x + $x),
+			(int) floor($location->y),
+			(int) floor($location->z + $z)
+		)->equals(BlockPathType::WALKABLE)) {
+			return false;
 		}
 		return true;
 	}
