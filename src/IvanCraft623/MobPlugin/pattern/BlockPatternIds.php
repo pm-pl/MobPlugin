@@ -21,11 +21,15 @@
 
 declare(strict_types=1);
 
-namespace IvanCraft623\MobPlugin\entity\boss;
+namespace IvanCraft623\MobPlugin\pattern;
 
-use IvanCraft623\MobPlugin\libs\_54965c2c3e3da49e\xenialdan\apibossbar\BossBar;
+final class BlockPatternIds{
 
-interface Boss {
+	private function __construct(){
+		//NOOP
+	}
 
-	public function getBossBar() : BossBar;
+	public const SPAWN_IRON_GOLEM = "spawn_iron_golem";
+	public const SPAWN_SNOW_GOLEM = "spawn_snow_golem";
+	public const SPAWN_WITHER = "spawn_wither";
 }
