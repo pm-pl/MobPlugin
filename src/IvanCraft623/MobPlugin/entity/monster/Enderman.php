@@ -40,7 +40,7 @@ use IvanCraft623\MobPlugin\entity\NeutralMobTrait;
 use IvanCraft623\MobPlugin\item\ExtraVanillaItems;
 use IvanCraft623\MobPlugin\particle\TeleportTrailParticle;
 use IvanCraft623\MobPlugin\sound\EntityStareSound;
-use IvanCraft623\MobPlugin\libs\_e856d7078d6b632a\IvanCraft623\Pathfinder\BlockPathType;
+use IvanCraft623\MobPlugin\libs\_e289719fa6fc5ae4\IvanCraft623\Pathfinder\BlockPathType;
 
 use pocketmine\block\Block;
 use pocketmine\block\BlockTypeIds;

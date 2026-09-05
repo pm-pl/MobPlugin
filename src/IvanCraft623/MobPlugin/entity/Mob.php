@@ -36,8 +36,8 @@ use IvanCraft623\MobPlugin\MobPlugin;
 use IvanCraft623\MobPlugin\Settings;
 use IvanCraft623\MobPlugin\sound\MobWarningSound;
 use IvanCraft623\MobPlugin\utils\Utils;
-use IvanCraft623\MobPlugin\libs\_e856d7078d6b632a\IvanCraft623\Pathfinder\BlockPathType;
-use IvanCraft623\MobPlugin\libs\_e856d7078d6b632a\IvanCraft623\Pathfinder\BlockPathTypeCostMap;
+use IvanCraft623\MobPlugin\libs\_e289719fa6fc5ae4\IvanCraft623\Pathfinder\BlockPathType;
+use IvanCraft623\MobPlugin\libs\_e289719fa6fc5ae4\IvanCraft623\Pathfinder\BlockPathTypeCostMap;
 
 use pocketmine\block\BlockTypeIds;
 use pocketmine\color\Color;

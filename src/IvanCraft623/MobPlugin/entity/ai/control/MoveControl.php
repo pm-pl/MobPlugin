@@ -25,8 +25,8 @@ namespace IvanCraft623\MobPlugin\entity\ai\control;
 
 use IvanCraft623\MobPlugin\entity\Mob;
 use IvanCraft623\MobPlugin\utils\Utils;
-use IvanCraft623\MobPlugin\libs\_e856d7078d6b632a\IvanCraft623\Pathfinder\BlockPathType;
-use IvanCraft623\MobPlugin\libs\_e856d7078d6b632a\IvanCraft623\Pathfinder\world\SyncBlockGetter;
+use IvanCraft623\MobPlugin\libs\_e289719fa6fc5ae4\IvanCraft623\Pathfinder\BlockPathType;
+use IvanCraft623\MobPlugin\libs\_e289719fa6fc5ae4\IvanCraft623\Pathfinder\world\SyncBlockGetter;
 
 use pocketmine\math\Vector3;
 use function atan2;
@@ -140,7 +140,7 @@ class MoveControl implements Control {
 			}
 		} elseif ($this->operation === self::OPERATION_JUMPING) {
 			$this->mob->setMotionSpeed($this->speedModifier * $movementSpeed);
-			if ($this->mob->onGround) {
+			if ($this->mob->onGround || $this->mob->getNavigation()->isInLiquid()) {
 				$this->operation = self::OPERATION_WAIT;
 			}
 		} else {

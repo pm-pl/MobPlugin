@@ -24,8 +24,8 @@ declare(strict_types=1);
 namespace IvanCraft623\MobPlugin\entity\ai\utils;
 
 use IvanCraft623\MobPlugin\entity\PathfinderMob;
-use IvanCraft623\MobPlugin\libs\_e856d7078d6b632a\IvanCraft623\Pathfinder\evaluator\WalkNodeEvaluator;
-use IvanCraft623\MobPlugin\libs\_e856d7078d6b632a\IvanCraft623\Pathfinder\world\SyncBlockGetter;
+use IvanCraft623\MobPlugin\libs\_e289719fa6fc5ae4\IvanCraft623\Pathfinder\evaluator\WalkNodeEvaluator;
+use IvanCraft623\MobPlugin\libs\_e289719fa6fc5ae4\IvanCraft623\Pathfinder\world\SyncBlockGetter;
 use pocketmine\math\Vector3;
 use pocketmine\utils\Random;
 use pocketmine\world\Position;
